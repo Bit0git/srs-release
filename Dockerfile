@@ -14,7 +14,7 @@ RUN set -ex; \
     apt-get update; \
     apt-get install -y --no-install-recommends ca-certificates wget unzip;\
     cd /tmp; \
-    wget https://github.com/Bit0git/srs-release/blob/master/SRS-Debian8-armv7l-2.0.258.zip; \
+    wget https://github.com/Bit0git/srs-release/raw/master/SRS-Debian8-armv7l-2.0.258.zip; \
     unzip -q SRS-Debian8-armv7l-2.0.258.zip; \
     cd SRS-Debian8-armv7l-2.0.258; \
     sudo bash INSTALL; \
