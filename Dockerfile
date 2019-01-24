@@ -12,12 +12,12 @@ ARG SRS_VERSION
 ENV SRS_VERSION=${SRS_VERSION}
 RUN set -ex; \
     apt-get update; \
-    apt-get install -y --no-install-recommends ca-certificates wget unzip;\
+    apt-get install -y --no-install-recommends ca-certificates wget unzip lsb-release;\
     cd /tmp; \
     wget https://github.com/Bit0git/srs-release/raw/master/SRS-Debian8-armv7l-2.0.258.zip; \
     unzip -q SRS-Debian8-armv7l-2.0.258.zip; \
     cd SRS-Debian8-armv7l-2.0.258; \
-    sudo bash INSTALL; \
+    bash INSTALL; \
     rm -rf /tmp/*; \
     rm -rf /var/lib/apt/lists/*;   
 EXPOSE 1935 1985 8080
